@@ -6,36 +6,25 @@ $fetch=mysqli_fetch_array($sel);
 
 ?>
 <nav id="sidebar" class="active text-warning" >
-            <div class="sidebar-header">
-                <img src="assets/images/LOGO.png" alt="bootraper logo" class="app-logo">
+<div class="sidebar-header">
+                <img src="assets/img/logo.png" alt="bootraper logo" class="app-logo">
+                <a ><span class="text-warning p-2" style="font-size: 20px;">Global Cargo</a> 
             </div>
             <ul class="list-unstyled components">
                 <li>
                     <a href="dashboard.php"><i class="fas fa-home"></i> Dashboard</a>
                 </li>
                 <li>
-                    <a href="show_coupons.php"><i class="fas fa-cut"></i>Coupons </a>
+                    <a href="charts.php"><i class="fas fa-chart-bar"></i> Charts</a>
                 </li>
                 <li>
-                    <a href="show_deals.php"><i class="fas fa-box-open"></i>Deals </a>
+                    <a href="quotation.php"><i class="fas fa-user-friends"></i>Show Data</a>
                 </li>
                 <li>
-                    <a href="show_offers.php"><i class="fas fa-gifts"></i>Offers </a>
-                </li>             
-                <li>
-                    <a href="show_store.php"><i class="fas fa-store"></i>Stores </a>
+                    <a href="contact.php"><i class="fas fa-user-friends"></i>Contact</a>
                 </li>
                 <li>
-                    <a href="show_category.php"><i class="fas fa-gift"></i>Categories </a>
-                </li> 
-                <li>
-                    <a href="show_customer.php"><i class="fas fa-icons"></i>Customer</a>
-                </li>
-                <li>
-                    <a href="show_contact.php"><i class="fas fa-user-shield"></i> Contact</a>
-                </li>
-                <li>
-                    <a href="user.php"><i class="fas fa-user-friends"></i>User</a>
+                    <a href="users.php"><i class="fas fa-user-friends"></i>Users</a>
                 </li>
             </ul>
         </nav>
@@ -51,7 +40,6 @@ $fetch=mysqli_fetch_array($sel);
                                 <div class="dropdown-menu dropdown-menu-right nav-link-menu">
                                     <ul class="nav-list">
                                         <li><a href="logout.php" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
-                                        <li><a href="change_pass.php" class="dropdown-item"><i class="fas fa-key"></i> Change password</a></li>
                                     </ul>
                                 </div>
                             </div>

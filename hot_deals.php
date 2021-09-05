@@ -13,7 +13,7 @@ if(isset($_POST['btn_search']))
 <html lang="en">
 <head>
       <meta charset="utf-8" />
-      <title>Indus-Coupons | Hot-Deals</title>
+      <title>Indus-Coupons | Categories</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
       <meta content="" name="description" />
       <meta content="Kupons" name="author" />
@@ -24,7 +24,7 @@ if(isset($_POST['btn_search']))
       <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
       <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css">
       <link href="assets/css/animsition.min.css" rel="stylesheet" type="text/css">
-      <link href="owl.carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css">
+      <link href="owl.carousel/assets/owl.carousel.css" rel="stylesheet" type="text/css">            
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
       <!-- Css -->
@@ -76,13 +76,22 @@ document.onclick=reEnable
          <!-- Navigation Bar-->
          <header class="header">
             <div class="top-nav  navbar m-b-0 b-0 bg-danger">
-               <div class="container">
+            <div class="container">
                   <div class="row">
                      <!-- LOGO -->
                      <div class="topbar-left col-sm-6">
                      </div>
                      <!-- End Logo container-->
                      <div class="nav navbar-nav navbar-right pull-right col-sm-6 col-xs-8">
+                     <ul class="nav navbar-nav navbar-right pull-right">
+                           <li>
+                              <form role="search" class="app-search pull-left hidden-xs" method="post">
+                                    <input class="form-control" placeholder="Search coupons ..." aria-label="Text input with multiple buttons" name="id"> 
+                                 <a href="coupon.php" name="btn_main"><i class="ti-search"></i></a> 
+                              </form>
+                           </li>
+
+                        </ul>
                     
                         <div class="menu-item">
                            <!-- Mobile menu toggle-->
@@ -97,13 +106,12 @@ document.onclick=reEnable
             </div>
             <div class="navbar-custom shadow">
                <div class="container">
-                  <div  id="navigation">
+               <div  id="navigation">
                      <div class="topbar-left col-sm-2 m-t-5">
-                        <a  class="logo"> <img src="assets/images/LOGO.png" alt="" class="img-responsive"> </a>
+                        <a  class="active" href="index.php"> <img src="assets/images/LOGO.png" alt="" class="img-responsive"> </a>
                      </div>
                      <!-- Navigation Menu-->
-                     <ul class="navigation-menu">
-                        <li class="active"> <a href="index.php"><i class="ti-home"></i> <span> Home </span> </a> </li>
+                     <ul class="navigation-menu col-sm-10">
                         <li class="has-submenu">
                            <a href="#"><i class="ti-cut"></i> <span> Coupons </span> </a>
                            <ul class="submenu">
@@ -127,21 +135,17 @@ document.onclick=reEnable
                         <li class="has-submenu">
                            <a href="singup.php"><i class="ti-user"></i>Sing Up</a>
                         </li>
-                        <li class="has-submenu">
-                           <form role="search" class="app-search pull-left hidden-xs" method="post">
-                                 <input class="form-control" placeholder="Search coupons ..." aria-label="Text input with multiple buttons" name="id"> 
-                              <a href="coupon.php" name="btn_main"><i class="ti-search"></i></a> 
-                           </form>
+                        <li class="has-submenu"> 
+                        <a href="login.php">
+                        <i class="ti-lock"></i> <span> Login </span> </a> 
                         </li>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="login.php"><i class="ti-lock" style="margin-left:8px;font-size:25px;color:black"></i></a>
-                     </ul>
+                       </ul>
                      <!-- End navigation menu  -->
                   </div>
                </div>
             </div>
          </header>
-         <!-- Navigation ends -->
-         <div class="breadcrmb-wrap hidden-xs">
+         <div class="breadcrmb-wrap hidden-xs m-t-30">
             <div class="container">
                <div class="row">
                   <div class="col-sm-6">
