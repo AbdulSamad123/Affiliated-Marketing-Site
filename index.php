@@ -193,24 +193,24 @@ document.onclick=reEnable
                         <!-- /.carosuel -->
                         <div class="carousel-tabs clearfix">
                         <?php 
-                              $conn=$_SESSION['conn'];
-                              $sel=mysqli_query($conn," SELECT deals.discription,deals.link,store.logo,store.content
-                              from store join deals on store.id=deals.store");
-                              $num=mysqli_num_rows($sel);
-                              for($i=1; $i<=3; $i++)
-                              {
-                                    $row=mysqli_fetch_array($sel);
-                                    echo '<a class="col-sm-4 tab url" href="'."$row[1]".'">';
-                                    echo '<div class="media">';
-                                    echo '<div class="media-left media-middle"> <img src="assets/images/'."$row[2]".'" style=="height:64px;width:64px;" > </div>';
-                                    echo '<div class="media-body">';
-                                    echo '<h4 class="media-heading">'."$row[0]".'</h4>';
-                                    echo '<p>'."$row[3]".'</p>';
-                                    echo '</div>';
-                                    echo '</div>';
-                                    echo '</a>';
-                              }
-                              ?>
+                        $conn=$_SESSION['conn'];
+                        $sel=mysqli_query($conn," SELECT deals.discription,deals.link,store.logo,store.content
+                        from store join deals on store.id=deals.store");
+                        $num=mysqli_num_rows($sel);
+                        for($i=1; $i<=3; $i++)
+                        {
+                              $row=mysqli_fetch_array($sel);
+                              echo '<a class="col-sm-4 tab url" href="'."$row[1]".'">';
+                              echo '<div class="media">';
+                              echo '<div class="media-left media-middle"> <img src="assets/images/'."$row[2]".'" style="height:64px;width:64px;" > </div>';
+                              echo '<div class="media-body">';
+                              echo '<h4 class="media-heading">'."$row[0]".'</h4>';
+                              echo '<p>'."$row[3]".'</p>';
+                              echo '</div>';
+                              echo '</div>';
+                              echo '</a>';
+                        }
+                        ?>
                                     </div>
    
                      <!--/slide wrap -->

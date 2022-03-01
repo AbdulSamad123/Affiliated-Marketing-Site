@@ -28,7 +28,7 @@ if(isset($_POST['sub']))
                                         <div class="form-row">
                                         <div class="form-group col-md-6">
                                                 <label for="Date">Date</label>
-                                                <input type="Date" class="form-control" name="txtdate" placeholder="Date" required>
+                                                <input type="Date" class="form-control" name="txtdate" placeholder="Date"  >
                                                 <small class="form-text text-muted">Please enter date of issue</small>
                                             </div>
                                             <div class="form-group col-md-6">
@@ -40,33 +40,33 @@ if(isset($_POST['sub']))
                                         <div class="form-row">
                                         <div class="form-group col-md-12">
                                             <label for="address">Discription</label>
-                                            <input type="text" class="form-control" name="txtdis" placeholder="Discription and detail of your offer" required>
+                                            <input type="text" class="form-control" name="txtdis" placeholder="Discription and detail of your offer"  >
                                         </div>
                                         </div>
                                         <div class="form-row">
                                         <div class="form-group col-md-6">
                                             <label for="address">Link</label>
-                                            <input type="url" class="form-control" name="txtlink" placeholder="link of the offer" required>
+                                            <input type="url" class="form-control" name="txtlink" placeholder="link of the offer"  >
                                         </div>
                                         <div class="form-group col-md-6">
                                                 <label for="email">Banner Image</label>
-                                                <input type="file" class="form-control" name="txtimg" placeholder="Logo" required>
+                                                <input type="file" class="form-control" name="txtimg" placeholder="Logo"  >
                                         </div>
                                         </div>  
                                         <div class="form-row">
                                             <div class="form-group col-md-4">
                                                 <label for="city">Offer Code</label>
-                                                <input type="text" class="form-control" name="txtcod" placeholder="Offer Code" required>
+                                                <input type="text" class="form-control" name="txtcod" placeholder="Offer Code"  >
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="state">Store</label>
-                                                <select name="txtstore" class="form-control" required>
+                                                <select name="txtstore" class="form-control"  >
                                                        <?php $obj->view_str();?>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="state">Category</label>
-                                                <select name="txtcat" class="form-control" required>
+                                                <select name="txtcat" class="form-control"  >
                                                          <?php $obj->view_cat();?>
                                                 </select>
                                             </div>

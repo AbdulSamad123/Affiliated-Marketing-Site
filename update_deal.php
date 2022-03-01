@@ -67,13 +67,13 @@ if(isset($_POST['sub']))
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="store">Store</label>
-                                                <select name="txtstore" value="<?php echo $row[7];?>"  class="form-control" required>
+                                                <select name="txtstore" value="<?php echo $row[7];?>"  class="form-control"  >
                                                      <?php $obj->view_str();?>
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="category">Category</label>
-                                                <select name="txtcat" value="<?php echo $row[8];?>"  class="form-control" required>
+                                                <select name="txtcat" value="<?php echo $row[8];?>"  class="form-control"  >
                                                        <?php $obj->view_cat();?>
                                                 </select>
                                             </div>

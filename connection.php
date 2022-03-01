@@ -1,5 +1,8 @@
 <?php
 
+//http://cp.vnchost.com
+// user:induscoupon
+// pwd:indus123*
 class functions
  {
     function con()
@@ -55,18 +58,26 @@ class functions
     function add_store($name,$website,$content)
     {
        $conn = $_SESSION['conn'];
-       $id="";
+       $id="0";
        $logo =  $_FILES["txtlogo"]["name"];        
        if(isset($_FILES["txtlogo"]))
        {
-               move_uploaded_file($_FILES["txtlogo"]["tmp_name"],"assets/images/uploads/". $logo);    	
+            move_uploaded_file($_FILES["txtlogo"]["tmp_name"],"assets/images/uploads/". $logo);    	
        }
-       $insert = mysqli_query( $conn, "insert into store values('$id','$logo','$name','$website','$content');" );
-       if ( $insert )
+       $check="SELECT COUNT(*) FROM store WHERE name = '.$name.'";
+       if (mysqli_query($conn,$check)>=1)
        {
-           echo "<script> alert('store Added'); </script>";
+            echo "<script> alert('store already exists'); </script>";
        }
-   }
+       else
+       {
+            $insert = mysqli_query( $conn, "insert into store values('$id','$logo','$name','$website','$content');" );
+            if ( $insert )
+            {
+                echo "<script> alert('store Added'); </script>";
+            }
+       }
+    }
     function add_category($name)
     {
        $conn = $_SESSION['conn'];

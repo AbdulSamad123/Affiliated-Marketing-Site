@@ -26,7 +26,7 @@ if(isset($_POST['sub']))
                                     <form autocomplete="off" method="post">
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <input type="text" class="form-control" name="txtcat" placeholder="Category" required>
+                                                <input type="text" class="form-control" name="txtcat" placeholder="Category"  >
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-warning" name="sub"><i class="fas fa-save"></i> Save</button>

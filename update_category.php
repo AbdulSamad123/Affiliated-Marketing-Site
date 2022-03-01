@@ -30,11 +30,11 @@ if(isset($_POST['sub']))
                                     <form autocomplete="off" method="post">
                                     <div class="form-group">
                                             <label for="address">Id No</label>
-                                            <input type="text" value="<?php echo $row[0];?>"  class="form-control" name="txtdis"readonly name="id" required>
+                                            <input type="text" value="<?php echo $row[0];?>"  class="form-control" name="txtdis"readonly name="id"  >
                                         </div>
                                         <div class="form-row">
                                             <div class="form-group col-md-12">
-                                                <input type="text" value="<?php echo $row[1];?>" class="form-control" name="txtcat" placeholder="Category" required>
+                                                <input type="text" value="<?php echo $row[1];?>" class="form-control" name="txtcat" placeholder="Category"  >
                                             </div>
                                         </div>
                                         <button type="submit" class="btn btn-warning" name="sub"><i class="fas fa-save"></i> Update</button>
