@@ -64,19 +64,18 @@ class functions
        {
             move_uploaded_file($_FILES["txtlogo"]["tmp_name"],"assets/images/uploads/". $logo);    	
        }
-       $check="SELECT COUNT(*) FROM store WHERE name = '.$name.'";
-       if (mysqli_query($conn,$check)>=1)
-       {
-            echo "<script> alert('store already exists'); </script>";
+       $name = $_POST['txtname'];
+       $check = mysqli_query($conn, "SELECT name FROM store WHERE name = '$name'");
+       if(mysqli_num_rows($check) > 0){
+        echo "<script> alert('store already exist'); </script>";
        }
-       else
-       {
+       else{
             $insert = mysqli_query( $conn, "insert into store values('$id','$logo','$name','$website','$content');" );
             if ( $insert )
             {
                 echo "<script> alert('store Added'); </script>";
             }
-       }
+        }
     }
     function add_category($name)
     {
