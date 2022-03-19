@@ -59,49 +59,8 @@ $obj->con();
           }
             
         </script>
-              <script>
-        $(document).keydown(function (event) {
-          if (event.keyCode == 123) { // Prevent F12
-              return false;
-          } else if (event.ctrlKey && event.shiftKey && event.keyCode == 73) { // Prevent Ctrl+Shift+I        
-              return false;
-          }
-      });
-      document.onkeydown = function(e) {
-    if(event.keyCode == 123) {
-     return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)){
-     return false;
-    }
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)){
-     return false;
-    }
-    if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)){
-     return false;
-    }
 
-    if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)){
-     return false;
-    }      
- }
-<script type="text/JavaScript">
-//courtesy of BoogieJack.com
-function killCopy(e){
-return false
-}
-function reEnable(){
-return true
-}
-document.onselectstart=new Function ("return false")
-if (window.sidebar){
-document.onmousedown=killCopy
-document.onclick=reEnable
-}
-      </script>
-
-   <body oncontextmenu="return false;" onselectstart="return false"
-      onkeydown="if ((arguments[0] || window.event).ctrlKey) return false">
+   <body>
       <div class="site-wrapper animsition" data-animsition-in="fade-in" data-animsition-out="fade-out">
          <!-- Navigation Bar-->
          <header class="header">
@@ -184,7 +143,7 @@ document.onclick=reEnable
                         
                                                         
                      <div class="samad">
-                       <img src="assets/images/slide-02.jpg" id="slide" alt="" width="100%" height="100%">
+                       <img src="assets/images/slide-02.jpg" id="slide" alt="" width="100%" height="60%">
                        <button onclick="mySlide('prev');"><</button>
                        <button onclick="mySlide('next');">></button>
                       </div>
@@ -555,8 +514,7 @@ document.onclick=reEnable
                         <div class="col-sm-12 text-center m-t-20">
                         <p> <strong>
                         Copyright 2020
-                        </strong>Indus-Coupons | This website is Designed by <i class="ti-heart">
-                        </i> <strong>
+                        </strong>Indus-Coupons | This website is Designed by<strong>
                          <a href="https://www.facebook.com/profile.php?id=100004132877739">Abdul Samad</a>
                         </strong> 
                      </p>

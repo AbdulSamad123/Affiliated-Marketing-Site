@@ -235,7 +235,7 @@ echo $count;
 		}
     }
 
-        function view_str()
+    function view_str()
 	{
 		$conn=$_SESSION['conn'];
 		$sel=mysqli_query($conn,"select * from store");
@@ -292,29 +292,29 @@ echo $count;
               }
           }
    
-    function view_coupon()
- {
-        $conn = $_SESSION['conn'];
-        $sel = mysqli_query( $conn, 'select * from coupon' );
-        $num = mysqli_num_rows( $sel );
-        for ( $i = 1; $i <= $num; $i++ )
- {
-            $row = mysqli_fetch_array( $sel );
-            echo '<tr>';
-            echo '<td>' . $i . '</td>';
-            echo '<td>' . $row[1] . '</td>';
-            echo '<td>' . $row[2] . '</td>';
-            echo '<td>' . $row[3] . '</td>';
-            echo '<td>' . $row[4] . '</td>';
-            echo '<td>' . $row[5] . '</td>';
-            echo '<td>' . $row[6] . '</td>';
-            echo '<td>' . $row[7] . '</td>';
-            echo '<td>' . $row[8] . '</td>';
-            echo "<td class='text-warning'>" . '<a href="update_coupon.php?id='.$row[0].'"><i class="fas fa-pen"></i> </a> | <a href="delete.php?id='.$row[0].'"><i class="fas fa-trash"></i> </a>' . '</td>';
-            echo '</tr>';
-        }
-
-    }
+    function view_cops()
+    {
+           $conn = $_SESSION['conn'];
+           $sel = mysqli_query( $conn, 'select * from coupon' );
+           $num = mysqli_num_rows( $sel );
+           for ( $i = 1; $i <= $num; $i++ )
+    {
+               $row = mysqli_fetch_array( $sel );
+               echo '<tr>';
+               echo '<td>' . $i . '</td>';
+               echo '<td>' . $row[1] . '</td>';
+               echo '<td>' . $row[2] . '</td>';
+               echo '<td>' . $row[3] . '</td>';
+               echo '<td>' . $row[4] . '</td>';
+               echo '<td>' . $row[5] . '</td>';
+               echo '<td>' . $row[6] . '</td>';
+               echo '<td>' . $row[7] . '</td>';
+               echo '<td>' . $row[8] . '</td>';
+                echo "<td class='text-warning'>" . '<a href="update_coupon.php?id='.$row[0].'"><i class="fas fa-pen"></i> </a> | <a href="delete.php?id='.$row[0].'"><i class="fas fa-trash"></i> </a>' . '</td>';
+               echo '</tr>';
+           }
+   
+       }
 
     function view_deal()
  {
@@ -377,7 +377,7 @@ echo $count;
                   echo '<td>' . $row[2] . '</td>';
                   echo '<td>' . $row[3] . '</td>';
                   echo '<td>' . $row[4] . '</td>';
-                   echo "<td class='text-warning'>" . '<a href="update_store.php?id='.$row[0].'"><i class="fas fa-pen"></i> </a> | <a href="del_store.php?id='.$row[0].'"><i class="fas fa-trash"></i> </a>' . '</td>';
+                   echo "<td class='text-warning'>" . '<a href="update_store.php?id='.$row[0].'"><i class="fas fa-pen"></i> </a> | <a href="del_store.php?id='.$row['id'].'"><i class="fas fa-trash"></i> </a>' . '</td>';
                   echo '</tr>';
               }
        }

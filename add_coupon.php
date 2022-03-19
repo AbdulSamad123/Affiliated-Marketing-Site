@@ -66,6 +66,7 @@ if(isset($_POST['sub']))
                                             <div class="form-group col-md-4">
                                                 <label for="category">Select Store</label>
                                                 <select name="txtstore" class="form-control">
+                                                    <option value="0">Select Store</option>
                                                      <?php $obj->view_str();?>
                                                 </select>
                                             </div>
@@ -73,6 +74,7 @@ if(isset($_POST['sub']))
                                             <div class="form-group col-md-4">
                                                 <label for="category">Category</label>
                                                 <select name="txtcat" class="form-control">
+                                                     <option value="0">Select Category</option>
                                                      <?php $obj->view_cat();?>
                                                 </select>
                                             </div>

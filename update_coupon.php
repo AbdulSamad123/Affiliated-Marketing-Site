@@ -64,12 +64,14 @@ if(isset($_POST['sub']))
                                             <div class="form-group col-md-4">
                                                 <label for="store">Store</label>
                                                 <select name="txtstore" value="<?php echo $row[6];?>"  class="form-control">
+                                                      <option value="<?php echo $row[6];?>">Select Store</option>
                                                       <?php $obj->view_str();?> 
                                                 </select>
                                             </div>
                                             <div class="form-group col-md-4">
                                                 <label for="category">Category</label>
-                                                <select name="txtcat" value="<?php echo $row[7];?>"  class="form-control">
+                                                <select name="txtcat" class="form-control">
+                                                    <option value="<?php echo $row[7];?>">Select Category</option>
                                                     <?php $obj->view_cat();?>
                                                 </select>
                                             </div>

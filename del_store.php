@@ -2,7 +2,7 @@
 include "connection.php";
 $obj=new functions();
 $obj->con();
-$obj->del_store($_POST['id']);
+$obj->del_store($_GET['id']);
 ?>
 <!doctype html>
 

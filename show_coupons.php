@@ -35,7 +35,7 @@ $obj->con();
                                     </tr>
                                 </thead>
                                 <tbody>
-                                <?php $obj->view_coupon();?>
+                                <?php $obj->view_cops();?>
                                </tbody>
                             </table>
                         </div>
