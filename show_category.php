@@ -18,7 +18,7 @@ $obj->con();
                         </h3>
                     </div>
                     <div class="box box-primary">
-                        <div class="box-body">
+                        <div class="box-body" style="overflow-x:auto;">
                             <table width="100%" class="table table-hover" id="dataTables-example">
                                 <thead>
                                     <tr>

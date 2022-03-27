@@ -103,21 +103,37 @@ $obj->con();
          <section class="results m-t-30">
             <div class="container">
                <div class="row">
-                  <div class="col-sm-3">
+                  <div class="col-sm-6">
                   <div class="widget">
                         <!-- /widget heading -->
                         <div class="widget-heading">
                            <h3 class="widget-title text-dark">
-                             Stores
+                              Top Stores  
                            </h3>
+                           <div class="widget-widgets"> <a href="store.php">View More Stores <span class="ti-angle-right"></span></a> </div>
                            <div class="clearfix"></div>
                         </div>
                         <div class="widget-body">
-                           <!-- Sidebar navigation -->
-                           <ul class="nav sidebar-nav">
-                           <li> <?php $obj->view_allstr();?></li>
-                           </ul>
-                           <!-- Sidebar divider -->
+                           <div class="row">
+                           <?php
+                            $conn=$_SESSION['conn'];
+                            $sel=mysqli_query($conn,"select * from store");
+                            $num=mysqli_num_rows($sel);
+                            for($i=1; $i<=$num; $i++)
+                           {
+                              $row=mysqli_fetch_array($sel);
+                              echo '<div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 thumb">';
+                              echo '<div class="thumb-inside">';
+                              echo '<a class="thumbnail" href='."$row[3]".'> <img class="img-responsive" src="assets/images/uploads/'."$row[1]".'"  style=="height:64px;width:64px;"> </a>';
+                              echo '</div>';					
+                              echo '<div class="store_name text-center">';
+                              echo '<h5>'."$row[2]".'</h5>';
+                              echo '</div>';
+                              echo ' </div>';
+                           }
+                           ?>                               
+                              <!-- /thumb -->
+                           </div>
                         </div>
                      </div>
                      <div class="widget">
@@ -202,7 +218,7 @@ $obj->con();
                      </div>
                   </div>
                   <!--/col -->
-                  <div class="col-sm-9">
+                  <div class="col-sm-6">
                      <div class="widget-body">
                         <div class="widget">
                            <ul class="nav nav-tabs solo-nav responsive-tabs" id="myTab">
@@ -234,8 +250,8 @@ $obj->con();
                           echo '</div>';
                           echo '</div>';
                           echo '<div class="coupon-contain col-sm-7">';
-                          echo '<h4 class="coupon-title"><a href="#">'."$row[3]".'</a></h4>';
-                          echo '<p data-toggle="collapse" data-target="#more3">'."$row[9]".'</p>';
+                          //echo '<h4 class="coupon-title"><a href="#">'."$row[3]".'</a></h4>';
+                          echo '<p data-toggle="collapse" data-target="#more3">'."$row[3]".'</p>';
                           echo '<h4>Coupon Added on '."$row[1]".' & Expires on '."$row[2]".'</h4>';
                           echo '<p data-toggle="collapse" data-target="#more3">Category : '."$row[10]".'</p>';
                           echo '</div>';
@@ -274,8 +290,8 @@ $obj->con();
                           echo '</div>';
                           echo '</div>';
                           echo '<div class="coupon-contain col-sm-7">';
-                          echo '<h4 class="coupon-title"><a href="#">'."$row[3]".'</a></h4>';
-                          echo '<p data-toggle="collapse" data-target="#more3">'."$row[9]".'</p>';
+                         // echo '<h4 class="coupon-title"><a href="#">'."$row[3]".'</a></h4>';
+                          echo '<p data-toggle="collapse" data-target="#more3">'."$row[3]".'</p>';
                           echo '<h4>Coupon Added on '."$row[1]".' & Expires on '."$row[2]".'</h4>';
                           echo '<p data-toggle="collapse" data-target="#more3">Category : '."$row[10]".'</p>';
                           echo '</div>';

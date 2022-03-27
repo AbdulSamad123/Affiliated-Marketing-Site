@@ -267,8 +267,8 @@ if(isset($_POST['btn_search']))
                                     echo '<a>';
                                     echo ' <div class="media">';
                                     echo ' <div class="media-body">';
-                                    echo ' <h4 class="media-heading m-t-30">'."$row[3]".'</h4>';                                    
-                                    echo ' <h4 class="media-heading m-t-10">'."$row[10]".'</h4>';
+                                    // echo ' <h4 class="media-heading m-t-30">'."$row[3]".'</h4>';                                    
+                                    echo ' <h4 class="media-heading m-t-10">'."$row[3]".'</h4>';
                                     echo ' <h4 class="media-heading m-t-10">Category : '."$row[11]".'</h4>';
                                     echo '<div class="col-sm-12"> <span class="expiry_date"><p>Deal Added on '."$row[1]".' & Expires on '."$row[2]".'</p></span>';
                                     echo ' <div class="action-block">';

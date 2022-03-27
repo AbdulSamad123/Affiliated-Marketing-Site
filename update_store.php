@@ -8,7 +8,7 @@ $select = mysqli_query( $conn, "select * from store where id='$id'" );
 $row = mysqli_fetch_array( $select );
 if(isset($_POST['sub']))
 {
-    $obj -> upd_store($_POST['txtname'],$_POST['txtweb'],$_POST['txtcon']);
+    $obj -> upd_store($_POST['txtlogo'],$_POST['txtname'],$_POST['txtweb'],$_POST['txtcon']);
 }
 
 ?>
@@ -37,7 +37,8 @@ if(isset($_POST['sub']))
                                         <div class="form-row">
                                             <div class="form-group col-md-6">
                                                 <label for="email">logo</label>
-                                                <input type="file" value="<?php echo $row[1];?>" class="form-control" name="txtlogo" placeholder="Logo">
+                                                <img src="assets/images/uploads/<?=$row[1];?>"/>
+                                                 <input type="hidden" name="txtlogo" value="<?php echo $row[1];?>" />
                                             </div>
                                             <div class="form-group col-md-6">
                                                 <label for="password">Name</label>

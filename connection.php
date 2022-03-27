@@ -1,3 +1,13 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script >
+$(window).bind('beforeunload', function(){
+    $.ajax({
+        type: 'get',
+        async: false,
+        url: 'logout.php'
+    });
+});
+</script>
 <?php
 
 //http://cp.vnchost.com
@@ -8,6 +18,8 @@ class functions
     function con()
     {
         session_start();
+        
+       // header("refresh:100;url=index.php");
         $conn = $_SESSION['conn'] = mysqli_connect( 'localhost', 'root', '', 'indus' );
     }
 
@@ -19,6 +31,7 @@ class functions
         if ( $insert )
         {
             echo "<script> alert('Coupon Added'); </script>";
+            header("refresh:1;url=index.php");// it takes 2 sec to go index page
         }
     }
    
@@ -541,7 +554,7 @@ echo $count;
              }
 
              
-             function upd_store($name,$website,$content)
+             function upd_store($logo,$name,$website,$content)
              {
                  $conn = $_SESSION['conn'];
                  $id= $_GET['id'];
@@ -553,7 +566,7 @@ echo $count;
                  $name = $_POST['txtname'];
                  $website = $_POST['txtweb'];
                  $content = $_POST['txtcon'];
-                 $insert = mysqli_query( $conn, "update store set logo='".$logo."', name='".$name."', website='".$website."',content='".$content."' where id='".$id."'" );
+                 $insert = mysqli_query( $conn, "update store set logo='".$logo."', name='".$name."', website='".$website."',content='".$content."' where id='".$id."'" )or die(mysql_error());
                  if ($insert)
                  {
                      # code...
